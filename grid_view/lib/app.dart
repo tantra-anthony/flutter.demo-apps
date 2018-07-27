@@ -1,20 +1,31 @@
 import 'package:flutter/material.dart';
-import 'landing.dart';
-import 'grid_view.dart';
 
-class LandingPage extends StatelessWidget {
+import 'home.dart';
+import 'landing.dart';
+
+class GridViewApp extends StatelessWidget {
   @override
     Widget build(BuildContext context) {
       // TODO: implement build
       return new MaterialApp(
         title: 'Grid View',
-        home: GridViewApp(),
-        initialRoute: '/landing',
+        initialRoute: '/',
         routes: {
-          '/landing'
-        },
+          '/': (context) => LandingPage(),
+          '/home': (context) => HomePage()
+        },      
       );
     }
-
   
+  // Route<dynamic> _getRoute(RouteSettings settings) {
+  //   if (settings.name != '/login') {
+  //     return null;
+  //   }
+
+  //   return MaterialPageRoute<void>(
+  //     settings: settings,
+  //     builder: (BuildContext context) => LoginPage(),
+  //     fullscreenDialog: true,
+  //   );
+  // }
 }
