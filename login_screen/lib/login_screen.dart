@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
 
-class SampleLoginScreen extends StatelessWidget {
-  // instantiate the build view here
-  @override
-    Widget build(BuildContext context) {
-      return MaterialApp(
-        title: "Simple Login Screen",
-        home: LoginScreen(),
-      );
-    }
-}
-
 class LoginScreen extends StatefulWidget {
   // create state for LoginScreen
   @override
