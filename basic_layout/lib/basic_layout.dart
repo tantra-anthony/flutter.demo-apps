@@ -8,6 +8,10 @@ import 'image.dart';
 import 'text.dart';
 import 'icons.dart';
 import 'buttons.dart';
+import 'placeholder.dart';
+import 'switch.dart';
+import 'selection_controls.dart';
+import 'slider.dart';
 
 class BasicLayoutApp extends StatelessWidget {
 
@@ -19,10 +23,14 @@ class BasicLayoutApp extends StatelessWidget {
         // home: ContainerWidget() // insert with appropriate demo file,
         // home: RowWidget(),
         // home: ColumnWidget(),
-        home: ImageWidget(),
+        // home: ImageWidget(),
         // home: TextWidget(),
         // home: IconWidget(),
         // home: ButtonWidget(),
+        // home: PlaceholderWidget(),
+        // home: SwitchWidget(),
+        // home: SelectionControlsWidget(),
+        home: SliderWidget(),
       );
     }
 
