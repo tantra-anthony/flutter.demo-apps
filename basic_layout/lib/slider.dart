@@ -22,7 +22,7 @@ class _SliderWidgetState extends State<SliderWidget> {
           children: <Widget>[
             Slider(
               value: sliderValue,
-              divisions: 10,
+              divisions: 10, // division is int
               min: 0.0,
               max: 100.0,
               label: 'Hello',

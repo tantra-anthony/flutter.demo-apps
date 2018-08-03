@@ -12,6 +12,8 @@ import 'placeholder.dart';
 import 'switch.dart';
 import 'selection_controls.dart';
 import 'slider.dart';
+import 'text_field.dart';
+import 'dialog.dart';
 
 class BasicLayoutApp extends StatelessWidget {
 
@@ -30,7 +32,9 @@ class BasicLayoutApp extends StatelessWidget {
         // home: PlaceholderWidget(),
         // home: SwitchWidget(),
         // home: SelectionControlsWidget(),
-        home: SliderWidget(),
+        // home: SliderWidget(),
+        // home: TextFieldWidget(),
+        home: DialogWidget(),
       );
     }
 
