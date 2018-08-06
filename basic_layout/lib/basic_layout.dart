@@ -14,6 +14,11 @@ import 'selection_controls.dart';
 import 'slider.dart';
 import 'text_field.dart';
 import 'dialog.dart';
+import 'chips.dart';
+import 'choice_chips.dart';
+import 'tooltip.dart';
+import 'data_table.dart';
+import 'card.dart';
 
 class BasicLayoutApp extends StatelessWidget {
 
@@ -34,7 +39,12 @@ class BasicLayoutApp extends StatelessWidget {
         // home: SelectionControlsWidget(),
         // home: SliderWidget(),
         // home: TextFieldWidget(),
-        home: DialogWidget(),
+        // home: DialogWidget(),
+        // home: ChipWidget(),
+        // home: ChoiceChipWidget(),
+        // home: TooltipWidget(),
+        // home: DataTableWidget(),
+        home: CardWidget(),
       );
     }
 
