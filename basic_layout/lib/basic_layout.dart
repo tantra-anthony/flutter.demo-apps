@@ -19,6 +19,7 @@ import 'choice_chips.dart';
 import 'tooltip.dart';
 import 'data_table.dart';
 import 'card.dart';
+import 'draggable.dart';
 
 class BasicLayoutApp extends StatelessWidget {
 
@@ -44,7 +45,8 @@ class BasicLayoutApp extends StatelessWidget {
         // home: ChoiceChipWidget(),
         // home: TooltipWidget(),
         // home: DataTableWidget(),
-        home: CardWidget(),
+        // home: CardWidget(),
+        home: DraggableWidget(),
       );
     }
 
