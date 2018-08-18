@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:fluttery/layout.dart';
 import 'package:tinder_clone/cards.dart';
+import 'package:tinder_clone/profiles.dart';
+
+import 'package:tinder_clone/matches.dart';
 
 void main() => runApp(new MyApp());
+
+final MatchEngine matchEngine = new MatchEngine(
+  matches: demoProfiles.map((Profile profile) {
+    return DateMatch(profile: profile);
+  }).toList(),
+);
 
 class MyApp extends StatelessWidget {
   @override
@@ -13,7 +21,7 @@ class MyApp extends StatelessWidget {
         primaryColorBrightness: Brightness.light, //for iOS users to see the status bar
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      home: new MyHomePage(title: 'Tinder for Cats'),
     );
   }
 }
@@ -86,21 +94,21 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: Icons.clear,
               iconColor: Colors.red,
               onPressed: () {
-                // TODO
+                matchEngine.currentMatch.nope();
               },
             ),
             RoundIconButton.small(
               icon: Icons.star,
               iconColor: Colors.blue,
               onPressed: () {
-                // TODO
+                matchEngine.currentMatch.superLike();
               },
             ),
             RoundIconButton.large(
               icon: Icons.favorite,
               iconColor: Colors.green,
               onPressed: () {
-                // TODO
+                matchEngine.currentMatch.like();
               },
             ),
             RoundIconButton.small(
@@ -120,7 +128,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: _buildAppBar(), 
-      body: DraggableCard(),
+      body: CardStack(
+        matchEngine: matchEngine,
+      ),
       bottomNavigationBar: _buildBottomBar(),
     );
   }
